@@ -1,0 +1,86 @@
+apiVersion: v1
+items:
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+    creationTimestamp: "2021-02-04T09:33:42Z"
+    generation: 1
+    labels:
+      app: quotesapi
+      app.kubernetes.io/component: quotesapi
+      app.kubernetes.io/instance: quotesapi
+    managedFields:
+    - apiVersion: image.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:openshift.io/generated-by: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+      manager: oc
+      operation: Update
+      time: "2021-02-04T09:33:42Z"
+    name: quotesapi
+    namespace: riccardo-pietrucci-quotes-dev
+    resourceVersion: "48722479"
+    selfLink: /apis/image.openshift.io/v1/namespaces/riccardo-pietrucci-quotes-dev/imagestreams/quotesapi
+    uid: 91fb06c5-e187-4a64-b0ff-20bc64b58390
+  spec:
+    lookupPolicy:
+      local: false
+  status:
+    dockerImageRepository: image-registry.openshift-image-registry.svc:5000/riccardo-pietrucci-quotes-dev/quotesapi
+    publicDockerImageRepository: default-route-openshift-image-registry.apps.ap45.prod.nextcle.com/riccardo-pietrucci-quotes-dev/quotesapi
+    tags:
+    - items:
+      - created: "2021-02-04T09:34:23Z"
+        dockerImageReference: image-registry.openshift-image-registry.svc:5000/riccardo-pietrucci-quotes-dev/quotesapi@sha256:e95a7f2cf818afe8fc34f6a1bee2a2d9099a78dc38d53d9952e14cd1e4e80e69
+        generation: 1
+        image: sha256:e95a7f2cf818afe8fc34f6a1bee2a2d9099a78dc38d53d9952e14cd1e4e80e69
+      tag: latest
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      openshift.io/image.dockerRepositoryCheck: "2021-02-04T09:33:28Z"
+    creationTimestamp: "2021-02-04T09:33:28Z"
+    generation: 2
+    name: quotesdb
+    namespace: riccardo-pietrucci-quotes-dev
+    resourceVersion: "48721931"
+    selfLink: /apis/image.openshift.io/v1/namespaces/riccardo-pietrucci-quotes-dev/imagestreams/quotesdb
+    uid: 91189d75-3f41-453b-a0c7-be02f1c55f1d
+  spec:
+    lookupPolicy:
+      local: false
+    tags:
+    - annotations: null
+      from:
+        kind: DockerImage
+        name: image-registry.openshift-image-registry.svc:5000/openshift/mysql:5.7
+      generation: 2
+      importPolicy: {}
+      name: "5.7"
+      referencePolicy:
+        type: Source
+  status:
+    dockerImageRepository: image-registry.openshift-image-registry.svc:5000/riccardo-pietrucci-quotes-dev/quotesdb
+    publicDockerImageRepository: default-route-openshift-image-registry.apps.ap45.prod.nextcle.com/riccardo-pietrucci-quotes-dev/quotesdb
+    tags:
+    - items:
+      - created: "2021-02-04T09:33:28Z"
+        dockerImageReference: image-registry.openshift-image-registry.svc:5000/openshift/mysql@sha256:9a781abe7581cc141e14a7e404ec34125b3e89c008b14f4e7b41e094fd3049fe
+        generation: 2
+        image: sha256:9a781abe7581cc141e14a7e404ec34125b3e89c008b14f4e7b41e094fd3049fe
+      tag: "5.7"
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
